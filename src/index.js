@@ -4,10 +4,11 @@ const express = require("express");
 const app = express();
 
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
 const cors = require("cors");
 app.use(cors());
+console.log(123);
 
 app.use("/api", require("./routes"));
 
